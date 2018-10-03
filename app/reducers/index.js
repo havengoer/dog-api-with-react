@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux';
 
-import sample from 'reducers/sample';
+import breeds from 'reducers/breeds';
+import pics from 'reducers/pics';
 
+// 
 const rootReducer = combineReducers({
-  sample,
+  breeds,
+  pics,
+  
 });
 
 export default rootReducer;

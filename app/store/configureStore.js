@@ -15,19 +15,23 @@ export default function configureStore(initialState) {
   const middleware = [thunk];
   let store;
   if (isClient && isDebug) {
+    console.log('isClient? HEREEEEEhere')
+
     middleware.push(createLogger());
     store = createStore(rootReducer, initialState, compose(
       applyMiddleware(...middleware),
       typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
     ));
   } else {
+    console.log('else HEREEEEEhere')
+
     store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware), f => f));
   }
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('reducers', () => {
       const nextReducer = require('../reducers');
-
+      console.log('HEREEEEEhere')
       store.replaceReducer(nextReducer);
     });
   }

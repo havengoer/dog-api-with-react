@@ -13,8 +13,8 @@ const buildPage = () => {
         ${staticAssets.createStylesheets()}
       </head>
       <body>
-        <div id="app"></div>
-        ${staticAssets.createAppScript()}
+      <div id="app"></div>
+      ${staticAssets.createAppScript()}
       </body>
     </html>`;
 };

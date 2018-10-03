@@ -1,5 +1,18 @@
 # Renew Front-end Code Test
 
+//  update buttons 
+// add default for activeDogBreed
+// fixed size for doggos; use crop
+
+
+// Search bar that filters on the breeds.
+As the user types characters into the box, the list of breeds should be filtered
+
+This does not need to re-ping the api, it just needs to filter the local data from your store
+
+Make the grid views responsive (4 columns on desktop, 2 on tablet, 1 on mobile)
+
+
 ![Dogs](./readme-images/Dogs.png)
 
 ## Tech Stack

@@ -10,6 +10,7 @@
     "lint:fix": "eslint --ext .js,.jsx app server --fix",
     "clean": "rimraf public && rimraf compiled",
     "start": "npm run build && cross-env NODE_ENV=production node compiled/server.js",
+    "win-start": "npm run build && cross-env SET NODE_ENV=production node compiled/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build:dev": "cross-env NODE_ENV=development npm run webpack -- --env.server",
     "build": "npm run clean && cross-env NODE_ENV=production npm run webpack -- --env.browser && NODE_ENV=production npm run webpack -- --env.server",
@@ -92,5 +93,8 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-manifest-plugin": "^1.1.0"
+  },
+  "optionalDependencies": {
+    "win-node-env": "^0.3.0"
   }
 }
